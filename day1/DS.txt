@@ -1,0 +1,37 @@
+/*
+    Data Structures and Algorithms
+    
+    Sessions: 5
+
+    Session: 1
+        - How to get into Product based companies
+        - How to prepare for the coding interviews? platforms/resources
+        - An example problem - how should you approach and solve in an interview
+        - Problem Solving Techniques
+        - What is that the interviewer might expect in an interview?
+    
+    Session: 2
+        - How to calculate time complexity of a code/function?
+        - Asymptotic notations
+        - Big - 'O' notation
+        - Examples: 8 to 10 code snippets
+    
+    Session: 3
+        - Linked Lists Data Structure
+        - Arrays and Strings
+        - Arrays Vs Linked List
+        - Types: Singly Linked List, Doubly Linked List, Circularly Linked List
+        - Implementation of SLL
+        - Example interview problems from linked lists
+    
+    Session: 4
+        - Stack Data Structure
+        - Implementation of Stack - Array & Object implementation
+        - Example interview problem from Stack
+    
+    Session: 5
+        - Recursion
+        - Recursion Tree
+        - Recurrence Relation and backward Substitution
+        - Example problems
+*/

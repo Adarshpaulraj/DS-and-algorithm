@@ -1,0 +1,139 @@
+/*
+    Recursion => A function that calls itself!
+*/
+
+// function sayHello() {
+//     console.log('hello');
+//     sayHello();
+// }
+
+// sayHello();
+
+/*
+    recursion tree:
+
+    sayHello()
+        - console.log('hello')
+        - sayHello()
+            - console.log('hello')
+            - sayHello()
+                ...
+                ...
+                ...
+*/
+
+// Iteration Vs Recursion
+
+// Problem: Print hello message for 3 times
+
+// iteration way
+// function sayHello(N) {
+//     
+//     for (let i = 1; i <= N; i++){
+//         console.log('hello');
+//     }
+// }
+
+// sayHello(3);
+
+// recursion way
+// function sayHello(N) {
+
+//     if (N == 0) return;
+
+//     console.log('hello');
+//     sayHello(N - 1);
+// }
+
+// sayHello(5);
+
+/*
+    sayHello(3)
+        - print hello
+        - sayHello(2)
+            - print hello
+            - sayHello(1)
+                - print hello
+                - sayHello(0)
+                    - return
+*/
+
+// Using recursion write a function to print the first N natural numbers
+/*
+    Input: 5
+
+    Output: 
+
+    5
+    4
+    3
+    2
+    1
+
+    Input: 3
+    Output:
+
+    3
+    2
+    1
+*/
+
+// function print(N) {
+
+//     if (N == 0) return;
+
+//     console.log(N);
+//     print(N - 1);
+// }
+
+// print(3);
+
+/*
+    print(3)
+        - N = 3; 3 == 0; false
+        - console.log(3)
+        - print(2)
+            - N = 2; 2 == 0; false
+            - console.log(2)
+            - print(1)
+                - N = 1; 1 == 0; false
+                - console.log(1)
+                - print(0)
+                    - N = 0; 0 == 0; true; return
+
+     print(3)
+*/
+
+function print(N) {
+
+    if (N == 0) return;
+
+    print(N - 1);
+    console.log(N);
+}
+
+print(3);
+
+
+/*
+    print(3)
+        - N = 3; 3 == 0; false
+        - print(2)
+            - N = 2; 2 == 0; false
+            - print(1)
+                - N = 1; 1 == 0; false
+                - print(0)
+                    - N = 0; 0 ==0; true; return
+                - console.log(1) X
+            - console.log(2) X
+        - console.log(3) X
+
+    print(3)
+*/
+
+
+/*
+
+=> print(3)
+
+*/

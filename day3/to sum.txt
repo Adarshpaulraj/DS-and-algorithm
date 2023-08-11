@@ -1,0 +1,37 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+// var twoSum = function(nums, target) {
+//     for(let i=0; i<nums.length-1; i++){
+//         for(let j=i+1; j<nums.length; j++){
+//             if(nums[i] + nums[j] == target){
+//                 return [i, j];
+//             }
+//         }
+//     }
+// };
+
+var twoSum = function(nums, target) {
+    let indexedNums = [];
+
+    for(let index in nums){
+        indexedNums.push([Number(index), nums[index]]);
+    }
+
+    indexedNums.sort((a, b) => a[1]-b[1]);
+
+    let left = 0;
+    let right = indexedNums.length - 1;
+
+    while(left < right){
+        if(indexedNums[left][1] + indexedNums[right][1] == target){
+            return [indexedNums[left][0], indexedNums[right][0]];
+        } else if(indexedNums[left][1] + indexedNums[right][1] < target){
+            left++;
+        } else {
+            right--;
+        }
+    }
+};

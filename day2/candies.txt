@@ -1,0 +1,276 @@
+/**
+ * @param {number} totalCandies
+ * @param {number[]} candies
+ * @param {number} i
+ * @return {boolean}
+ */
+// // time complexity: O(N)
+// var isGreater = function(totalCandies, candies, i){
+//     // assume that the totalCandies is greater than all the other kids candies except index i <- assumption
+//     let assumption = true;
+
+//     // iterate / traverse the candies array <- index
+//     for(let index=0; index<candies.length; index++){
+//         // except the index i
+//         if(index != i){
+//             // check if whether the totalCandies is less than the candies[index]
+//             // if true => update the assumption
+//             if(totalCandies < candies[index]){
+//                 assumption = false;
+//             }
+//         }
+//     }
+    
+//     // return the assumption
+//     return assumption;
+// }
+
+// // time complexity: O(N)
+// var isGreater = function(totalCandies, candies, i){
+//     // assume that the totalCandies is greater than all the other kids candies except index i <- assumption
+//     let assumption = true;
+
+//     // iterate / traverse the candies array <- index
+//     for(let index=0; index<candies.length; index++){
+//         // check if whether the totalCandies is less than the candies[index]
+//         // if true => update the assumption
+//         if(totalCandies < candies[index]){
+//             assumption = false;
+//         }
+//     }
+//     // return the assumption
+//     return assumption;
+// }
+
+// // time complexity: O(N)
+// var isGreater = function(totalCandies, candies, i){
+//     // assume that the totalCandies is greater than all the other kids candies except index i <- assumption
+//     let assumption = true;
+
+//     // iterate / traverse the candies array <- index
+//     for(let index=0; index<candies.length; index++){
+//         // check if whether the totalCandies is less than the candies[index]
+//         // if true => update the assumption
+//         if(totalCandies < candies[index]){
+//             assumption = false;
+//             break;
+//         }
+//     }
+//     // return the assumption
+//     return assumption;
+// }
+
+
+// // time complexity: O(N)
+// var isGreater = function(totalCandies, candies, i){
+//     // iterate / traverse the candies array <- index
+//     for(let index=0; index<candies.length; index++){
+//         // check if whether the totalCandies is less than the candies[index]
+//         // if true => update the assumption
+//         if(totalCandies < candies[index]){
+//             return false;
+//         }
+//     }
+//     // return the assumption
+//     return true;
+// }
+
+
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+// // time complexity: O(N^2)
+// var kidsWithCandies = function(candies, extraCandies) {
+//     // create an empty boolean array <- result
+//     let result = [];
+
+//     // traverse/iterate the candies array <- i = 0 to candies.length - 1
+//     for(let i=0; i<candies.length; i++){
+//         // find the total candies <- totalCandies
+//         let totalCandies = candies[i] + extraCandies;
+
+//         // compare the totalCandies with all the other kids candies
+//         if(isGreater(totalCandies, candies, i)){
+//             // if all the kids candies are lesser than the totalCandies
+//             // push true to the result array
+//             result.push(true);
+//         } else {
+//             // else push false to the result array
+//             result.push(false);
+//         }
+//     }
+    
+//     // return the result array
+//     return result;
+// };
+
+// // time complexity: O(N^2)
+// var kidsWithCandies = function(candies, extraCandies) {
+//     // create an empty boolean array <- result
+//     let result = [];
+
+//     // traverse/iterate the candies array <- i = 0 to candies.length - 1
+//     for(let i=0; i<candies.length; i++){
+//         // find the total candies <- totalCandies
+//         let totalCandies = candies[i] + extraCandies;
+
+//         // find the greatest candy <- greatestCandy
+//         let greatestCandy = Math.max(...candies);
+
+//         // compare the totalCandies with all the other kids candies
+//         if(totalCandies >= greatestCandy){
+//             // if all the kids candies are lesser than the totalCandies
+//             // push true to the result array
+//             result.push(true);
+//         } else {
+//             // else push false to the result array
+//             result.push(false);
+//         }
+//     }
+    
+//     // return the result array
+//     return result;
+// };
+
+// // time complexity: O(N)
+// var kidsWithCandies = function(candies, extraCandies) {
+//     // create an empty boolean array <- result
+//     let result = [];
+
+//     // find the greatest candy <- greatestCandy
+//     let greatestCandy = Math.max(...candies);
+
+//     // traverse/iterate the candies array <- i = 0 to candies.length - 1
+//     for(let i=0; i<candies.length; i++){
+//         // find the total candies <- totalCandies
+//         let totalCandies = candies[i] + extraCandies;
+
+//         // compare the totalCandies with all the other kids candies
+//         if(totalCandies >= greatestCandy){
+//             // if all the kids candies are lesser than the totalCandies
+//             // push true to the result array
+//             result.push(true);
+//         } else {
+//             // else push false to the result array
+//             result.push(false);
+//         }
+//     }
+    
+//     // return the result array
+//     return result;
+// };
+
+// // time complexity: O(N)
+// var kidsWithCandies = function(candies, extraCandies) {
+//     let result = [];
+//     let greatestCandy = Math.max(...candies);
+
+//     candies.forEach((candy) => {
+//         result.push(candy + extraCandies >= greatestCandy);
+//     });
+
+//     return result;
+// };
+
+// // time complexity: O(N)
+// var kidsWithCandies = function(candies, extraCandies) {
+//     let result = [];
+//     let greatestCandy = Math.max(...candies);
+
+//     candies.forEach(candy => result.push(candy + extraCandies >= greatestCandy));
+
+//     return result;
+// };
+
+// // time complexity: O(N^2)
+// var kidsWithCandies = function(candies, extraCandies) {
+//     let result = [];
+//     candies.forEach(candy => result.push(candy + extraCandies >= Math.max(...candies)));
+//     return result;
+// };
+
+// // time complexity: O(N^2)
+// var kidsWithCandies = function(candies, extraCandies) {
+//     let result = [];
+//     result = candies.map(candy => candy + extraCandies >= Math.max(...candies));
+//     return result;
+// };
+
+// // time complexity: O(N^2)
+// var kidsWithCandies = function(candies, extraCandies) {
+//     return candies.map(candy => candy + extraCandies >= Math.max(...candies));
+// };
+
+// time complexity: O(N)
+var kidsWithCandies = function(candies, extraCandies) {
+    let greatestCandy = Math.max(...candies);
+    return candies.map(candy => candy + extraCandies >= greatestCandy);
+};
+
+/*
+    1. Problem Understanding
+
+    candies = [2, 3, 5, 1, 3]
+            i [0][1][2][3][4]
+
+    extraCandies = 3
+
+    result =  [T, T, T, F, T]
+            i [0][1][2][3][4]
+
+    kid @ index 0
+    i = 0
+        totalCandies = candies[i] + extraCandies
+                     = candies[0] + extraCandies
+                     = 2 + 3
+                     = 5 >= [3, 5, 1, 3]
+                           [1][2][3][4]
+        5 >= 3 T
+        5 >= 5 T
+        5 >= 1 T
+        5 >= 3 T
+    
+    i = 1
+        totalCandies = candies[1] + extraCandies
+                     = 3 + 3
+                     = 6 >= [2, 5, 1, 3]
+                            [0][2][3][4]
+
+    i = 2
+        totalCandies = candies[2] + extraCandies
+                     = 5 + 3
+                     = 8 >= [2, 3, 1, 3]
+                            [0][1][3][4]
+    
+    i = 3
+        totalCandies = candies[3] + extraCandies
+                     = 1 + 3
+                     = 4 >= [2, 3, 5, 3]
+                            [0][1][2][4]
+        
+    i = 4
+        totalCandies = candies[4] + extraCandies
+                     = 3 + 3
+                     = 6 >= [2, 3, 5, 1]
+                            [0][1][2][3]
+    
+    2. Algorithm
+
+    a. create an empty boolean array <- result
+
+    b. traverse/iterate the candies array <- i = 0 to candies.length - 1
+        find the total candies <- totalCandies
+
+        compare the totalCandies with all the other kids candies
+            if all the kids candies are lesser than the totalCandies
+            push true to the result array
+
+            else push false to the result array
+    
+    c. return the result array
+
+    3. Implementation
+
+*/
