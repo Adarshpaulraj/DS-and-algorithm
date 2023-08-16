@@ -62,7 +62,7 @@ inp.on("close", () => {
     //     console.log(-1);
     // }
 
-    let stack = new stack();
+    let stack = new Stack();
     for (let word of words) {
         if (stack.isEmpty()) {
             stack.push(word);
